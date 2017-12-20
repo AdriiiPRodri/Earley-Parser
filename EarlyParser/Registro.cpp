@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /* 
  * File:   Registro.cpp
@@ -28,7 +23,7 @@ Registro::Registro(unsigned i_p, unsigned j_p, const string& A_p, const string& 
     grammar = grammar_p;
 }
 
-char Registro::splitVar() {
+char Registro::splitVar() const{
     char car;
     unsigned pos;
     for (auto it = grammar->getVariables()->begin(); it != grammar->getVariables()->end(); ++it) {
@@ -39,7 +34,7 @@ char Registro::splitVar() {
     return 'e';
 }
 
-char Registro::splitTer() {
+char Registro::splitTer() const{
     char car;
     unsigned pos;
     for (auto it = grammar->getTerminales()->begin(); it != grammar->getTerminales()->end(); ++it) {
@@ -55,7 +50,7 @@ bool Registro::operator==(const Registro& other) const{
 }
 
 
-void Registro::imprimir() {
+void Registro::imprimir() const{
     cout << "(" << i << ", " << j << ", " << A << ", " << alfa << ", " << beta << ")" << endl;
 }
 

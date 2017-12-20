@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /* 
  * File:   Earley.h
@@ -37,10 +32,10 @@ private:
     
     void initialization();
     void clausure();
-    void advance();
+    bool advance();
     void termination();
     
-    void comprobar();
+    void comprobar() const;
 };
 
 #endif /* EARLEY_H */

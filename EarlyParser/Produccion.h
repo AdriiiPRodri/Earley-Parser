@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /* 
  * File:   Produccion.h
@@ -23,10 +18,12 @@ class Produccion {
 public:
     Produccion(const string& otra);
     
-    char parteIzq();
-    string parteDer();
+    char parteIzq() const;
+    string parteDer() const;
     
     void imprimir() const;
+    
+    bool operator==(const Produccion& other) const;
 private:
     string _produccion;  //de la forma S>alfa
 };

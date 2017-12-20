@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /* 
  * File:   Registro.h
@@ -23,8 +18,8 @@ using namespace std;
 class Registro {
 public:
     Registro();
-    Registro(unsigned i_p, unsigned j_p, const string& A_p, const string& alfa_p, const string& beta_p,  Gramatica* grammar_p);
-    
+    Registro(unsigned i_p, unsigned j_p, const string& A_p, const string& alfa_p, const string& beta_p, Gramatica* grammar_p);
+
     unsigned getI() const {
         return i;
     }
@@ -32,7 +27,7 @@ public:
     unsigned getJ() const {
         return j;
     }
-    
+
     string getA() const {
         return A;
     }
@@ -45,19 +40,19 @@ public:
         return beta;
     }
 
-    char splitVar() ;
-    
-    char splitTer();
-    
-    void imprimir();
-    
+    char splitVar() const;
+
+    char splitTer() const;
+
+    void imprimir() const;
+
     bool operator==(const Registro& other) const;
 private:
     Gramatica* grammar;
-    unsigned i, j;  //posicion 1 y 2
-    string A;       //posicion 3
-    string alfa;    //posicion 4    
-    string beta;    //posicion 5
+    unsigned i, j; //posicion 1 y 2
+    string A; //posicion 3
+    string alfa; //posicion 4    
+    string beta; //posicion 5
 };
 
 #endif /* REGISTRO_H */
